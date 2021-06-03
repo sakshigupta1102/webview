@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+   <ProgressBar
+       android:layout_width="match_parent"
+       android:layout_height="8dp"
+       android:id="@+id/progressbar"
+       android:visibility="gone"
+       android:layout_marginTop="-3dp"
+       android:progress="20"
+       style="?android:attr/progressBarStyleHorizontal"
+       ></ProgressBar>
+
+   <WebView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/mywebview"
+
+       ></WebView>
+
+   <RelativeLayout
+       android:id="@+id/relativelayout"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+      <ImageView
+          android:layout_width="300dp"
+          android:layout_height="200dp"
+          android:layout_centerHorizontal="true"
+          android:id="@+id/noconnectionlogo"
+          android:src="@drawable/no"
+         ></ImageView>
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+         android:text="No Internet Connection..."
+         android:layout_below="@+id/noconnectionlogo"
+          android:textAlignment="center"
+          android:textSize="20dp"
+          android:textStyle="bold"
+          android:id="@+id/noconnectiontext"
+          android:layout_marginTop="20dp"
+         ></TextView>
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Retry"
+          android:layout_below="@+id/noconnectiontext"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="30dp"
+          android:background="@color/colorAccent"
+          android:paddingLeft="50dp"
+          android:textSize="15dp"
+          android:paddingRight="50dp"
+          android:textColor="#ffffff"
+          android:textStyle="bold"
+          android:id="@+id/noconnectionbtn"
+         ></Button>
+   </RelativeLayout>
+
+</LinearLayout>
